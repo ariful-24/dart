@@ -11,6 +11,14 @@ abstract class Car{
   void assembleElectricSystem();
 
   void voiceSystem();
+
+  String getInterfaceNumber(){
+    return "UINDXE";
+  }
+}
+
+abstract class ElectricCar{
+  void assembleBattery();
 }
 
 //Implementation
@@ -31,8 +39,44 @@ class Toyota extends Car{
     // TODO: implement voiceSystem
   }
 
+
+
 }
 
-class Nissan extends Car{
+
+
+class Nissan implements Car, ElectricCar{
+  @override
+  void assembleElectricSystem() {
+    // TODO: implement assembleElectricSystem
+  }
+
+  @override
+  void assembleEngine() {
+    // TODO: implement assembleEngine
+  }
+
+  @override
+  void voiceSystem() {
+    // TODO: implement voiceSystem
+  }
+
+  @override
+  void assembleBattery() {
+    // TODO: implement assembleBattery
+  }
+
+  @override
+  String getInterfaceNumber() {
+    // TODO: implement getInterfaceNumber
+    throw UnimplementedError();
+  }
+
+
+
+
+
+
+
 
 }
