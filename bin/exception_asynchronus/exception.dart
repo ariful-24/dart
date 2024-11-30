@@ -1,19 +1,29 @@
 void main(){
   // Exception Handling
 
-  List<int> result = [20,30,45];
-
-
-  // Fault tolerant application
+  // List<int> result = [20,30,45];
+  //
+  //
+  // // Fault tolerant application
+  //
+  // try{
+  //  //print(result[1]); //Expected
+  //  print(result[3]);// unexpected
+  //
+  // }catch(error){
+  //   print(error);
+  // }finally{
+  //   print('First Index value: ${result.first}');
+  // }
+  //
+  // print("Application running");
 
   try{
-   //print(result[1]); //Expected
-   print(result[3]);// unexpected
+    throw Exception();
 
-  }catch(error){
-    print(error);
+  }catch(e){
+    print(e);
+
   }
-
-  print("Application running");
 
 }
