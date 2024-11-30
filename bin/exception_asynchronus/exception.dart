@@ -19,11 +19,20 @@ void main(){
   // print("Application running");
 
   try{
-    throw Exception();
+    throw UnimplementedError();
 
   }catch(e){
     print(e);
 
   }
 
+  Car car = Car();
+  car.calculateSpeed();
+
+}
+class Car {
+  void calculateSpeed(){
+    throw UnimplementedError();
+
+  }
 }
