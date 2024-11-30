@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(){
   // Exception Handling
 
@@ -18,21 +20,21 @@ void main(){
   //
   // print("Application running");
 
+  bool isInternet = false;
+  int status = 401;
+
   try{
-    throw UnimplementedError();
+    if(!isInternet){
+      throw SocketException('Socket Exception');
+    }else{
+      throw HttpException('Http Exception');
+    }
 
   }catch(e){
     print(e);
 
   }
 
-  Car car = Car();
-  car.calculateSpeed();
 
 }
-class Car {
-  void calculateSpeed(){
-    throw UnimplementedError();
 
-  }
-}
