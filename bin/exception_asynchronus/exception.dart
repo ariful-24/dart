@@ -20,16 +20,14 @@ void main(){
   //
   // print("Application running");
 
-  bool isInternet = false;
-  int status = 401;
+  // Exception class types
 
   try{
-    if(!isInternet){
-      throw SocketException('Socket Exception');
-    }else{
-      throw HttpException('Http Exception');
-    }
-
+      throw SocketException('Http Exception');
+  } on HttpException{
+    print('Http Exception Happened');
+  }on SocketException{
+    print('Socket Exception Happened');
   }catch(e){
     print(e);
 
