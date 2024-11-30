@@ -6,6 +6,9 @@ void main(){
   Nissan nissan = Nissan();
   nissan.voiceSystem();
 
+  Tesla tesla = Tesla();
+  tesla.assembleBattery();
+
 }
 
 // abstract , extends, implements  --> mechanism(dart)
@@ -94,16 +97,20 @@ class Tesla implements Car, ElectricCar{
   @override
   void assembleBattery() {
     // TODO: implement assembleBattery
+    print("Battery Initiated");
+    assembleEngine();
   }
 
   @override
   void assembleElectricSystem() {
     // TODO: implement assembleElectricSystem
+
   }
 
   @override
   void assembleEngine() {
     // TODO: implement assembleEngine
+    print("Assemble Engine Completed");
   }
 
   @override
