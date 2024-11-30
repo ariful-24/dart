@@ -89,3 +89,32 @@ class Nissan implements Car, ElectricCar{
 
 
 }
+
+class Tesla implements Car, ElectricCar{
+  @override
+  void assembleBattery() {
+    // TODO: implement assembleBattery
+  }
+
+  @override
+  void assembleElectricSystem() {
+    // TODO: implement assembleElectricSystem
+  }
+
+  @override
+  void assembleEngine() {
+    // TODO: implement assembleEngine
+  }
+
+  @override
+  String getInterfaceNumber() {
+    // TODO: implement getInterfaceNumber
+    throw UnimplementedError();
+  }
+
+  @override
+  void voiceSystem() {
+    // TODO: implement voiceSystem
+  }
+
+}
