@@ -30,9 +30,31 @@ void main(){
     print('Socket Exception Happened');
   }catch(e){
     print(e);
-
+  }
+  //customize exception
+  try{
+    checkAge(17);
+  }catch(e){
+    print(' $e');
   }
 
+
+}
+void checkAge(int age){
+  if(age <18){
+    throw CustomException('You must be at least 18 years old.');
+  }
+  print('Age is acceptable');
+}
+
+class CustomException implements Exception{
+  final String message;
+
+  CustomException(this.message);
+@override
+ String toString(){
+   return message;
+ }
 
 }
 
