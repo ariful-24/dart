@@ -1,5 +1,11 @@
 void main(){
 
+  Toyota toyota = Toyota();
+  toyota.voiceSystem();
+
+  Nissan nissan = Nissan();
+  nissan.voiceSystem();
+
 }
 
 // abstract , extends, implements  --> mechanism(dart)
@@ -37,6 +43,8 @@ class Toyota extends Car{
   @override
   void voiceSystem() {
     // TODO: implement voiceSystem
+
+    print("hello user , let's talk ");
   }
 
 
@@ -59,6 +67,7 @@ class Nissan implements Car, ElectricCar{
   @override
   void voiceSystem() {
     // TODO: implement voiceSystem
+    print("hello user, first hear a music");
   }
 
   @override
