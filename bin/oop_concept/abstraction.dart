@@ -5,10 +5,6 @@ void main() {
 
   //Drive your car
 
-  car.assembleDisplay();
-  car.assembleInterior();
-  car.connectWire();
-  car.connectTyre();
   car.startEngine();
   car.driveTheCar();
 }
@@ -19,19 +15,30 @@ class Car {
 
   Car(this.brand, this.model);
 
-  void connectWire() {}
+  void _connectWire() {}
 
-  void connectTyre() {}
+  void _connectTyre() {}
 
-  void assembleEngine() {}
+  void _assembleEngine() {}
 
-  void assembleDisplay() {}
+  void _assembleDisplay() {}
 
-  void connectElectricSystem() {}
+  void _connectElectricSystem() {}
 
-  void assembleInterior() {}
+  void _assembleInterior() {}
 
-  void startEngine() {}
+  void startEngine() {
+    _connectWire();
+    _connectTyre();
+    _assembleEngine();
+    _assembleDisplay();
+    _connectElectricSystem();
+    _assembleInterior();
 
-  void driveTheCar() {}
+    print("Start Engine!");
+  }
+
+  void driveTheCar() {
+    print("Driving car!");
+  }
 }
